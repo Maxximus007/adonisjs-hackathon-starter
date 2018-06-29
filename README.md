@@ -1,6 +1,6 @@
 **Live Demo**: http://adonisjs-hackathonstarter.herokuapp.com/
 
-A boilerplate for **AdonisJS 4.0** web applications.
+A boilerplate for **AdonisJS 4.1** web applications.
 
 If you have attended any hackathons in the past, then you know how much time it takes to
 get a project started: decide on what to build, pick a programming language, pick a web framework,
@@ -19,15 +19,15 @@ AdonisJS is a free, open-source Node.js web framework, created by Aman Virk and 
 
 <h4 align="center">Home Example</h4>
 
-![](https://user-images.githubusercontent.com/3502724/29689780-5a64de42-891c-11e7-8650-4c0e6e926189.png)
+![](https://user-images.githubusercontent.com/3502724/30498074-43154190-9a4d-11e7-9c66-00d58f29f682.png)
 
 <h4 align="center">Login Example</h4>
 
-![](https://user-images.githubusercontent.com/3502724/29689778-59d036de-891c-11e7-835a-de7a25ff958c.png)
+![](https://user-images.githubusercontent.com/3502724/30498075-432c77f2-9a4d-11e7-9731-78af5f9d7875.png)
 
 <h4 align="center">API Examples</h4>
 
-![](https://user-images.githubusercontent.com/3502724/29689777-59c5a6ce-891c-11e7-90b9-6bfa3a672d43.png)
+![](https://user-images.githubusercontent.com/3502724/30498072-42f190f6-9a4d-11e7-8e0a-25086d75c0b2.png)
 
 Table of Contents
 -----------------
@@ -57,7 +57,7 @@ Features
 - **OAuth 2.0 Authentication** via Facebook, Google, GitHub, LinkedIn, Instagram, Foursquare, Bitbucket
 - Flash notifications
 - MVC Project Structure
-- Bootstrap 3
+- Bootstrap 4
 - Contact Form (powered by Mailgun or Mandrill or Sendgrid)
 - **Account Management**
 	- Gravatar
@@ -68,14 +68,14 @@ Features
  	- Delete Account
  	- CSRF protection
  	- Link to Social Accounts
- 	- **API Examples**: Facebook, Foursquare, Last.fm, Instagram, Tumblr, Twitter, Stripe, LinkedIn, Google Map e.t.c.
+ 	- **API Examples**: Facebook, Foursquare, Last.fm, Instagram, Tumblr, Twitter, Stripe, LinkedIn, Google Map, Github e.t.c.
 
 Prerequisites
 -------------
 - [Mysql](http://www.mysql.com) or [Postgresql](http://www.postgresql.org/)
 - [NodeJS 8.0.0+](https://nodejs.org/en/)
 - [NPM 4.0.0+](https://www.npmjs.com/)
-- [AdonisJS 4.0](http://adonisjs.com/)
+- [AdonisJS 4.1](http://adonisjs.com/)
 - Command Line Tools
     - <img src="http://deluge-torrent.org/images/apple-logo.gif" height="17">&nbsp;**Mac OS X:** [Xcode](https://itunes.apple.com/us/app/xcode/id497799835?mt=12) (or **OS X 10.9+**: `xcode-select --install`)
     - <img src="http://dc942d419843af05523b-ff74ae13537a01be6cfec5927837dcfe.r14.cf1.rackcdn.com/wp-content/uploads/windows-8-50x50.jpg" height="17">&nbsp;**Windows:** [Visual Studio](https://www.visualstudio.com/products/visual-studio-community-vs)
@@ -85,7 +85,7 @@ Prerequisites
    
 **Note:** If you are new to AdonisJS, I recommend to watch
 [Getting Started With AdonisJs](https://www.youtube.com/playlist?list=PLWmIA5YpCsizOMoM3tH5NSp1sHmdzVLvW) screencast by tutlage that teaches AdonisJS 3.2 from scratch. Alternatively,
-here is another great tutorial for building a project management app for beginners/intermediate developers by Ayeni Olusegun - [Build A Contact Management web Application with AdonisJS Framework](http://goodheads.io/2017/08/04/build-contact-management-web-application-adonisjs-framework-part-1/) . Since this branch is written with AdonisJS v4.0, Please follow [Upgrade Note](http://dev.adonisjs.com/docs/4.0/upgrade-guide)
+here is another great tutorial for building a project management app for beginners/intermediate developers by Ayeni Olusegun - [Build A Contact Management web Application with AdonisJS Framework](http://goodheads.io/2017/08/04/build-contact-management-web-application-adonisjs-framework-part-1/) . Since this branch is written with AdonisJS v4.1, Please follow [Upgrade Note](http://adonisjs.com/docs/4.1/upgrade-guide) and follow [Upgrade Note](http://adonisjs.com/docs/4.0/upgrade-guide) for v4.0
 
 Getting Started
 ---------------
@@ -100,16 +100,11 @@ npm install -g nodemon
 # if you don't have AdonisJS CLI
 npm i -g @adonisjs/cli
 
-# Get the project
-git clone -b AdonisJS-4.0 https://github.com/iamraphson/adonisjs-hackathon-starter.git adonisjs-hackathon-starter
+# To make use of this blueprint
+adonis new starter --blueprint=iamraphson/adonisjs-hackathon-starter
 
 # Change directory
-cd adonisjs-hackathon-starter
-
-# Rename env.example to .env and fill in all the keys and secrets and also generate a secure key for the app using `adonis key:generate`
-
-# Install Composer dependencies
-npm install
+cd starter
 
 # Run your migrations
 adonis migration:run
@@ -313,7 +308,7 @@ Project Structure
 | **app/Controllers/Http**/FacebookController.js                 | Controller for Facebook API functionality                            |
 | **app/Controllers/Http**/ContactController.js                 | Controller for Contact page                            |
 | **app/Controllers/Http**/FoursquareController.js                 | Controller for Foursquare API functionality                           |
-| **app/Controllers/Https**/GithubController.js                 | Controller for Github API functionality                           |
+| **app/Controllers/Https**/GithubController1.js                 | Controller for Github API functionality                           |
 | **app/Controllers/Http**/GoogleMapsController.js                 | Controller for Google Maps API functionality                           |
 | **app/Controllers/Http**/HomeController.js                 | Controller for Home Page                           |
 | **app/Controllers/Http**/InstagramController.js                 | Controller for Instagram API functionality                           |
@@ -368,7 +363,7 @@ List of Packages
 | cloudinary                        | Upload images/videos to Cloudinary                                             |
 | serve-favicon                   | Express 4 middleware offering favicon serving and caching.            |
 | fbgraph                         | Facebook Graph API library.                                           |
-| github                          | GitHub API library.                                                   |
+| @octokit/rest                   | GitHub API library.                                                   |
 | lastfm                          | Last.fm API library.                                                  |
 | instagram-node                  | Instagram API library.                                                |
 | lob                             | Lob API library                                                       |
